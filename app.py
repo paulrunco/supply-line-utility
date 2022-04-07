@@ -73,7 +73,7 @@ class App(Tk):
             ).pack(padx=5, pady=(0, 5), anchor='e')
 
         self.generate_button = Button(
-            self, text="Create report",
+            self, text="Update report",
             command=lambda: self.on_click_create_report()
         ).pack(fill='x', padx=5, pady=5)
 
