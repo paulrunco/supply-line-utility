@@ -1,9 +1,8 @@
-from cProfile import label
+from os import path
 from tkinter import Label, Entry, Button, Menu, StringVar, filedialog, Tk, END
 from tkinter import messagebox as mb
 import webbrowser
 
-from click import command
 
 import build_report
 
@@ -14,7 +13,8 @@ class App(Tk):
 
         ## App Settings
         self.resizable(False, False)
-        self.iconbitmap('icon.ico')
+        path_to_icon = path.abspath(path.join(path.dirname(__file__), 'icon.ico'))
+        self.iconbitmap(path_to_icon)
 
         self.version = "0.1"
         self.author = "PRunco"
