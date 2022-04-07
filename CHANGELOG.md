@@ -10,4 +10,4 @@ and this project attempts to adhere to [Semantic Versioning](https://semver.org/
 - Initial release including build_report utility and UI
 - This CHANGELOG file
 - The README for brief explanation of functionality and use
-- Compiled version of script in /dist/
+- Compiled binary

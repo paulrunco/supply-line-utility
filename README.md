@@ -4,7 +4,7 @@
 This utility automates the merging of data from MP Order Status View into the SupplyLine Operational Data template for upload to Supply Line portal.
 
 ## Installation
-Download and run the compiled binary from the /dist/ folder.
+Download and run the compiled binary.
 
 ## How to use
 
