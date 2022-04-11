@@ -1,7 +1,6 @@
 from os import path
 from tkinter import Label, Entry, Button, Menu, StringVar, filedialog, Tk, END
 from tkinter import messagebox as mb
-from turtle import title
 import webbrowser
 
 
@@ -17,7 +16,7 @@ class App(Tk):
         path_to_icon = path.abspath(path.join(path.dirname(__file__), 'icon.ico'))
         self.iconbitmap(path_to_icon)
 
-        self.version = "0.1"
+        self.version = "0.1.1"
         self.author = "PRunco"
 
         ## Menu
