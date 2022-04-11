@@ -4,7 +4,7 @@ from tkinter import messagebox as mb
 import webbrowser
 
 
-import build_report
+import functions
 
 
 class App(Tk):
@@ -122,7 +122,7 @@ class App(Tk):
             self.template_entry.config(background='red')
             return
         
-        build_report.build_report(self, path_to_order_status_report, path_to_template)
+        functions.build_report(self, path_to_order_status_report, path_to_template)
 
 
 if __name__ == "__main__":

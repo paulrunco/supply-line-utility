@@ -46,7 +46,7 @@ def build_report(self, path_to_order_status_report, path_to_supply_line_template
 
     # Order status / type
     order_status["Type"] = order_status["Status"].map(
-        {"Firm Planned": "PLANNED", "In Process": "WIP"}
+        {"Firm Planned": "PLANNED", "In Process": "WIP", "Completed": "WIP"}
     )
 
     # Remove unnececssary columns
