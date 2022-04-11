@@ -97,7 +97,7 @@ class App(Tk):
             )
 
     def open_docs(self):
-        webbrowser.open('https://www.github.com/paulrunco')
+        webbrowser.open('https://github.com/paulrunco/supply-line-utility')
         
     def ask_save_as(self):
         save_as = filedialog.asksaveasfilename(
@@ -122,7 +122,6 @@ class App(Tk):
             self.template_entry.config(background='red')
             return
         
-        #save_as = self.ask_save_as()
         build_report.build_report(self, path_to_order_status_report, path_to_template)
 
 
