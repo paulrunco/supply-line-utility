@@ -1,6 +1,7 @@
 from os import path
 from tkinter import Label, Entry, Button, Menu, StringVar, filedialog, Tk, END
 from tkinter import messagebox as mb
+from turtle import title
 import webbrowser
 
 
@@ -122,7 +123,10 @@ class App(Tk):
             self.template_entry.config(background='red')
             return
         
-        functions.build_report(self, path_to_order_status_report, path_to_template)
+        try:
+            functions.build_report(self, path_to_order_status_report, path_to_template)
+        except PermissionError:
+            mb.showerror(title="Write Error", message="Unable to write to file, is it open? \nPlease close the file and try again.")
 
 
 if __name__ == "__main__":
