@@ -4,7 +4,6 @@ from datetime import timedelta
 
 def build_report(self, path_to_order_status_report, path_to_supply_line_template):
 
-    sheet_name = "Direct FG Work Orders"
     columns = ['Customer Part', 'Assembly ID', 'Order-Rel', 'Start Date', 'Est Finish Date', 'Quantity', 'Type']
 
     old_row_count =  pd.read_excel(path_to_supply_line_template, sheet_name=1, skiprows=16).shape[0]
@@ -48,6 +47,10 @@ def build_report(self, path_to_order_status_report, path_to_supply_line_template
     order_status["Type"] = order_status["Status"].map(
         {"Firm Planned": "PLANNED", "In Process": "WIP", "Completed": "WIP"}
     )
+
+    # Change 1079's Quantity to 100 per EA
+    order_status['Quantity'] = order_status["Quantity"].mask(
+        order_status['Assembly ID'] == "FG-GEBC1079-PKT", order_status["Quantity"] * 100)
 
     # Remove unnececssary columns
     order_status = order_status.drop(
