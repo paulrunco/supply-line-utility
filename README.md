@@ -1,4 +1,7 @@
 # Supply Line Utility
+
+![Screenshot](screenshot.jpg)
+
 ## About
 
 This utility automates the merging of data from MP Order Status View into the SupplyLine Operational Data template for upload to Supply Line portal.
